@@ -18,4 +18,16 @@ Because of cors restriction from browser we are running chrome
 
 to avoid cors
  
-   
+
+for Developers
+
+run the index.html in resources folder
+
+using live server
+
+https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer
+
+for delivery
+
+run nue build latest
+
