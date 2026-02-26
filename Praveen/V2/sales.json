@@ -1,0 +1,73 @@
+{
+  "static_variables": [
+    {
+      "name": "svVchImportFormat",
+      "value": "json"
+    },
+    {
+      "name": "svCurrentCompany",
+      "value": "{{COMPANY_NAME}}"
+    }
+  ],
+  "tallymessage": [
+    {
+      "metadata": {
+        "type": "Voucher",
+        "vchtype": "Sales",
+        "action": "Create",
+        "objview": "Invoice Voucher View"
+      },
+
+      "date": "{{YYYYMMDD}}",
+      "vouchertypename": "Sales",
+      "vouchernumber": "{{VOUCHER_NUMBER}}",
+
+      "partyname": "{{PARTY_NAME}}",
+      "partyledgername": "{{PARTY_NAME}}",
+
+      "statename": "{{STATE_NAME}}",
+      "countryofresidence": "India",
+      "gstregistrationtype": "Regular",
+
+      "vchentrymode": "Item Invoice",
+
+      "allinventoryentries": [
+        {
+          "stockitemname": "{{ITEM_NAME}}",
+          "isdeemedpositive": false,
+          "rate": "{{RATE}}/{{UNIT}}",
+          "amount": "{{AMOUNT}}",
+          "actualqty": "{{QTY}} {{UNIT}}",
+          "billedqty": "{{QTY}} {{UNIT}}",
+
+          "batchallocations": [
+            {
+              "godownname": "{{GODOWN_NAME}}",
+              "batchname": "Primary Batch",
+              "amount": "{{AMOUNT}}",
+              "actualqty": "{{QTY}} {{UNIT}}",
+              "billedqty": "{{QTY}} {{UNIT}}"
+            }
+          ],
+
+          "accountingallocations": [
+            {
+              "ledgername": "{{SALES_LEDGER_NAME}}",
+              "isdeemedpositive": false,
+              "amount": "{{AMOUNT}}"
+            }
+          ]
+        }
+      ],
+
+      "ledgerentries": [
+        {
+          "ledgername": "{{PARTY_NAME}}",
+          "isdeemedpositive": true,
+          "ispartyledger": true,
+          "amount": "-{{TOTAL_AMOUNT}}"
+        }
+      ]
+    }
+  ]
+}
