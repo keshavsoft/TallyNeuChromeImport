@@ -1,0 +1,19 @@
+POST http://localhost:9000
+Content-Type: application/json;charset=utf-8
+Accept: application/json
+Tallyrequest : Export
+Type: collection
+Id : Ledger
+
+{
+    "static_variables": [
+        {
+            "name": "svExportFormat",
+            "value": "jsonex"
+        },
+        {
+            "name": "svCurrentCompany",
+            "value": "Mani"
+        }
+    ]
+}

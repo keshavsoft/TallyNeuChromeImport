@@ -1,0 +1,357 @@
+POST http://localhost:9000
+Content-Type: application/json;charset=utf-8
+Accept: application/json
+TallyRequest : Import
+Type: Data
+Id : Vouchers
+
+{
+  "static_variables": [
+    {
+      "name": "svVchImportFormat",
+      "value": "json"
+    },
+    {
+      "name": "svCurrentCompany",
+      "value": "PraveenStore"
+    }
+  ],
+  "tallymessage": [
+    {
+      "metadata": {
+        "type": "Voucher",
+        "remoteid": "7d614655-c4a0-4336-b4f3-cd7f8c5363a4-00000019",
+        "vchtype": "Sales",
+        "action": "Create",
+        "objview": "Invoice Voucher View"
+      },
+      "oldauditentryids": [
+        {
+          "metadata": true,
+          "type": "Number"
+        },
+        "-1"
+      ],
+      "date": "20250401",
+      "vchstatusdate": "20250401",
+      "guid": "7d614655-c4a0-4336-b4f3-cd7f8c5363a4-00000019",
+      "gstregistrationtype": "Regular",
+      "vatdealertype": "Regular",
+      "statename": "Andhra Pradesh",
+      "countryofresidence": "India",
+      "vouchertypename": "Sales",
+      "partyname": "Kumar",
+      "gstregistration": {
+        "value": "Andhra Pradesh Registration",
+        "taxtype": "GST",
+        "taxregistration": ""
+      },
+      "partyledgername": "Kumar",
+      "vouchernumber": "16",
+      "basicbuyername": "Kumar",
+      "cmpgstregistrationtype": "Regular",
+      "partymailingname": "Kumar",
+      "consigneemailingname": "Kumar",
+      "consigneestatename": "Andhra Pradesh",
+      "cmpgststate": "Andhra Pradesh",
+      "consigneecountryname": "India",
+      "basicbasepartyname": "Kumar",
+      "numberingstyle": "Auto Retain",
+      "cstformissuetype": "\u0004 Not Applicable",
+      "cstformrecvtype": "\u0004 Not Applicable",
+      "fbtpaymenttype": "Default",
+      "persistedview": "Invoice Voucher View",
+      "vchstatustaxadjustment": "Default",
+      "vchstatusvouchertype": "Sales",
+      "vchstatustaxunit": "Andhra Pradesh Registration",
+      "vchgstclass": "\u0004 Not Applicable",
+      "vchentrymode": "Item Invoice",
+      "vouchertypeorigname": "Sales",
+      "diffactualqty": false,
+      "ismstfromsync": false,
+      "isdeleted": false,
+      "issecurityonwhenentered": false,
+      "asoriginal": false,
+      "audited": false,
+      "iscommonparty": false,
+      "forjobcosting": false,
+      "isoptional": false,
+      "effectivedate": "20250401",
+      "useforexcise": false,
+      "isforjobworkin": false,
+      "allowconsumption": false,
+      "useforinterest": false,
+      "useforgainloss": false,
+      "useforgodowntransfer": false,
+      "useforcompound": false,
+      "useforservicetax": false,
+      "isreversechargeapplicable": false,
+      "issystem": false,
+      "isfetchedonly": false,
+      "isgstoverridden": false,
+      "iscancelled": false,
+      "isonhold": false,
+      "issummary": false,
+      "isecommercesupply": false,
+      "isboenotapplicable": false,
+      "isgstsecsevenapplicable": false,
+      "ignoreeinvvalidation": false,
+      "cmpgstisothterritoryassessee": false,
+      "partygstisothterritoryassessee": false,
+      "irnjsonexported": false,
+      "irncancelled": false,
+      "ignoregstconflictinmig": false,
+      "isopbaltransaction": false,
+      "ignoregstformatvalidation": false,
+      "iseligibleforitc": true,
+      "ignoregstoptionaluncertain": false,
+      "updatesummaryvalues": false,
+      "isewaybillapplicable": false,
+      "isdeletedretained": false,
+      "isnull": false,
+      "isexcisevoucher": false,
+      "excisetaxoverride": false,
+      "usefortaxunittransfer": false,
+      "isexer1nopoverwrite": false,
+      "isexf2nopoverwrite": false,
+      "isexer3nopoverwrite": false,
+      "ignoreposvalidation": false,
+      "exciseopening": false,
+      "useforfinalproduction": false,
+      "istdsoverridden": false,
+      "istcsoverridden": false,
+      "istdstcscashvch": false,
+      "includeadvpymtvch": false,
+      "issubworkscontract": false,
+      "isvatoverridden": false,
+      "ignoreorigvchdate": false,
+      "isvatpaidatcustoms": false,
+      "isdeclaredtocustoms": false,
+      "vatadvancepayment": false,
+      "vatadvpay": false,
+      "iscstdelcaredgoodssales": false,
+      "isvatrestaxinv": false,
+      "isservicetaxoverridden": false,
+      "isisdvoucher": false,
+      "isexciseoverridden": false,
+      "isexcisesupplyvch": false,
+      "gstnotexported": false,
+      "ignoregstinvalidation": false,
+      "isgstrefund": false,
+      "ovrdnewaybillapplicability": false,
+      "isvatprincipalaccount": false,
+      "vchstatusisvchnumused": false,
+      "vchgststatusisincluded": false,
+      "vchgststatusisuncertain": false,
+      "vchgststatusisexcluded": false,
+      "vchgststatusisapplicable": false,
+      "vchgststatusisgstr2breconciled": false,
+      "vchgststatusisgstr2bonlyinportal": false,
+      "vchgststatusisgstr2bonlyinbooks": false,
+      "vchgststatusisgstr2bmismatch": false,
+      "vchgststatusisgstr2bindiffperiod": false,
+      "vchgststatusisreteffdateoverrdn": false,
+      "vchgststatusisoverrdn": false,
+      "vchgststatusisstatindiffdate": false,
+      "vchgststatusisretindiffdate": false,
+      "vchgststatusmainsectionexcluded": false,
+      "vchgststatusisbranchtransferout": false,
+      "vchgststatusissystemsummary": false,
+      "vchstatusisunregisteredrcm": false,
+      "vchstatusisoptional": false,
+      "vchstatusiscancelled": false,
+      "vchstatusisdeleted": false,
+      "vchstatusisopeningbalance": false,
+      "vchstatusisfetchedonly": false,
+      "vchgststatusisoptionaluncertain": false,
+      "vchstatusisreacceptforhsndone": false,
+      "vchstatusisreaccephsnsixonedone": false,
+      "paymentlinkhasmultiref": false,
+      "isshippingwithinstate": false,
+      "isoverseastouristtrans": false,
+      "isdesignatedzoneparty": false,
+      "hascashflow": false,
+      "ispostdated": false,
+      "usetrackingnumber": false,
+      "isinvoice": true,
+      "mfgjournal": false,
+      "hasdiscounts": false,
+      "aspayslip": false,
+      "iscostcentre": false,
+      "isstxnonrealizedvch": false,
+      "isexcisemanufactureron": false,
+      "isblankcheque": false,
+      "isvoid": false,
+      "orderlinestatus": false,
+      "vatisagnstcancsales": false,
+      "vatispurcexempted": false,
+      "isvatrestaxinvoice": false,
+      "vatisassesablecalcvch": false,
+      "isvatdutypaid": true,
+      "isdeliverysameasconsignee": false,
+      "isdispatchsameasconsignor": false,
+      "isdeletedvchretained": false,
+      "vchonlyaddlinfoupdated": false,
+      "changevchmode": false,
+      "resetirnqrcode": false,
+      "alterid": " 41",
+      "masterid": " 25",
+      "voucherkey": "196481868890160",
+      "voucherretainkey": "57",
+      "vouchernumberseries": "Default",
+      "allinventoryentries": [
+        {
+          "stockitemname": "Badam",
+          "isdeemedpositive": false,
+          "isgstassessablevalueoverridden": false,
+          "strdisgstapplicable": false,
+          "contentnegispos": false,
+          "islastdeemedpositive": false,
+          "isautonegate": false,
+          "iscustomsclearance": false,
+          "istrackcomponent": false,
+          "istrackproduction": false,
+          "isprimaryitem": false,
+          "isscrap": false,
+          "rate": "500.00/Kgs",
+          "amount": "2500.00",
+          "actualqty": " 5.00 Kgs",
+          "billedqty": " 5.00 Kgs",
+          "batchallocations": [
+            {
+              "godownname": "Main Location",
+              "batchname": "Primary Batch",
+              "indentno": "\u0004 Not Applicable",
+              "orderno": "\u0004 Not Applicable",
+              "trackingnumber": "\u0004 Not Applicable",
+              "dynamiccstiscleared": false,
+              "amount": "2500.00",
+              "actualqty": " 5.00 Kgs",
+              "billedqty": " 5.00 Kgs"
+            }
+          ],
+          "accountingallocations": [
+            {
+              "oldauditentryids": [
+                {
+                  "metadata": true,
+                  "type": "Number"
+                },
+                "-1"
+              ],
+              "ledgername": "5% Sales",
+              "gstclass": "\u0004 Not Applicable",
+              "isdeemedpositive": false,
+              "ledgerfromitem": false,
+              "removezeroentries": false,
+              "ispartyledger": false,
+              "gstoverridden": false,
+              "isgstassessablevalueoverridden": false,
+              "strdisgstapplicable": false,
+              "strdgstispartyledger": false,
+              "strdgstisdutyledger": false,
+              "contentnegispos": false,
+              "islastdeemedpositive": false,
+              "iscapvattaxaltered": false,
+              "iscapvatnotclaimed": false,
+              "amount": "2500.00"
+            }
+          ]
+        },
+        {
+          "stockitemname": "Pista",
+          "isdeemedpositive": false,
+          "isgstassessablevalueoverridden": false,
+          "strdisgstapplicable": false,
+          "contentnegispos": false,
+          "islastdeemedpositive": false,
+          "isautonegate": false,
+          "iscustomsclearance": false,
+          "istrackcomponent": false,
+          "istrackproduction": false,
+          "isprimaryitem": false,
+          "isscrap": false,
+          "rate": "300.00/Kgs",
+          "amount": "3000.00",
+          "actualqty": " 10.00 Kgs",
+          "billedqty": " 10.00 Kgs",
+          "batchallocations": [
+            {
+              "godownname": "Main Location",
+              "batchname": "Primary Batch",
+              "indentno": "\u0004 Not Applicable",
+              "orderno": "\u0004 Not Applicable",
+              "trackingnumber": "\u0004 Not Applicable",
+              "dynamiccstiscleared": false,
+              "amount": "3000.00",
+              "actualqty": " 10.00 Kgs",
+              "billedqty": " 10.00 Kgs"
+            }
+          ],
+          "accountingallocations": [
+            {
+              "oldauditentryids": [
+                {
+                  "metadata": true,
+                  "type": "Number"
+                },
+                "-1"
+              ],
+              "ledgername": "5% Sales",
+              "gstclass": "\u0004 Not Applicable",
+              "isdeemedpositive": false,
+              "ledgerfromitem": false,
+              "removezeroentries": false,
+              "ispartyledger": false,
+              "gstoverridden": false,
+              "isgstassessablevalueoverridden": false,
+              "strdisgstapplicable": false,
+              "strdgstispartyledger": false,
+              "strdgstisdutyledger": false,
+              "contentnegispos": false,
+              "islastdeemedpositive": false,
+              "iscapvattaxaltered": false,
+              "iscapvatnotclaimed": false,
+              "amount": "3000.00"
+            }
+          ]
+        }
+      ],
+      "ledgerentries": [
+        {
+          "oldauditentryids": [
+            {
+              "metadata": true,
+              "type": "Number"
+            },
+            "-1"
+          ],
+          "ledgername": "Kumar",
+          "gstclass": "\u0004 Not Applicable",
+          "isdeemedpositive": true,
+          "ledgerfromitem": false,
+          "removezeroentries": false,
+          "ispartyledger": true,
+          "gstoverridden": false,
+          "isgstassessablevalueoverridden": false,
+          "strdisgstapplicable": false,
+          "strdgstispartyledger": false,
+          "strdgstisdutyledger": false,
+          "contentnegispos": false,
+          "islastdeemedpositive": true,
+          "iscapvattaxaltered": false,
+          "iscapvatnotclaimed": false,
+          "amount": "-5500.00",
+          "billallocations": [
+            {
+              "name": "1",
+              "billtype": "Agst Ref",
+              "tdsdeducteeisspecialrate": false,
+              "amount": "-5500.00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
