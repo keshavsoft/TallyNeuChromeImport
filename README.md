@@ -119,5 +119,6 @@ Required Matching in Tally
 
 Create Sales perfect
 
+V2 perfect with import
 
 
