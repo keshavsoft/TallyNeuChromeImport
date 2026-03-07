@@ -17,6 +17,7 @@ const __dirname = path.dirname(__filename);
 // Creates ledger entries for voucher
 const startFunc = ({ inItemsJsonAsArray, inLedgerDetails }) => {
     let LocalArray = [];
+
     const LocalInItemsJsonAsArray = inItemsJsonAsArray;
 
     const LocalAmount = LocalInItemsJsonAsArray.map(element => {
@@ -27,17 +28,19 @@ const startFunc = ({ inItemsJsonAsArray, inLedgerDetails }) => {
         return element.Rate * element.Qty;
     });
 
+    const amountSum = LocalAmount.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    const onlyAmountSum = LocalOnlyAmount.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
     const LocalLedgerEntry = prepareLedger({
         inLedgerName: inLedgerDetails.LedgerName,
-        inAmount: `-${LocalAmount}.00`
+        inAmount: `-${amountSum}.00`
     });
 
     LocalArray.push(LocalLedgerEntry);
 
-
     const LocalCGST = prepareLedger({
         inLedgerName: "CGST Output",
-        inAmount: `${(LocalAmount - LocalOnlyAmount) / 2}.00`
+        inAmount: `${(amountSum - onlyAmountSum) / 2}.00`
     });
 
     LocalArray.push(LocalCGST);
@@ -45,7 +48,7 @@ const startFunc = ({ inItemsJsonAsArray, inLedgerDetails }) => {
 
     const LocalSGST = prepareLedger({
         inLedgerName: "SGST Output",
-        inAmount: `${(LocalAmount - LocalOnlyAmount) / 2}.00`
+        inAmount: `${(amountSum - onlyAmountSum) / 2}.00`
     });
 
     LocalArray.push(LocalSGST);

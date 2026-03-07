@@ -31,6 +31,7 @@ const startFunc = () => {
         const LocalClientData = ReadClientData();
 
         const LocalInventoryItem = ForInventory({ inItemsJsonAsArray: LocalClientData.allinventoryentries });
+
         const LocalLedgerItem = ForLedger({
             inItemsJsonAsArray: LocalClientData.allinventoryentries,
             inLedgerDetails: LocalClientData.customerDetails
@@ -47,14 +48,17 @@ const startFunc = () => {
         });
 
         data.tallymessage[0].allinventoryentries = LocalInventoryItem;
+
+        fs.writeFileSync("import.json", JSON.stringify(data));
+
         data.tallymessage[0].ledgerentries = LocalLedgerItem;
 
         return data;
-    } catch (err) {
 
+
+    } catch (err) {
         console.error("Import Failed");
         console.log(err.response?.data || err.message);
-
     };
 };
 
