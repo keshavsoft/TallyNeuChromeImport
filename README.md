@@ -122,3 +122,5 @@ Create Sales perfect
 V2 perfect with import
 
 V5 perfect with single item
+
+V8 perfect modular
