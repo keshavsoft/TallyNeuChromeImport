@@ -15,12 +15,10 @@ const __dirname = path.dirname(__filename);
 
 // Prepares single inventory entry
 const startFunc = ({ inItemName, inTaxPer, inUom, inRate, inQty }) => {
-    const filePath = path.join(__dirname, "..", "..", "Data", "inventory.json");
+    const filePath = path.join(__dirname, "..", "..", "..", "..", "Data", "inventory.json");
     let template = fs.readFileSync(filePath, "utf8");
 
     let data = JSON.parse(template);
-
-
     // --------------------------------------------------
     // Local Variables
     // --------------------------------------------------
