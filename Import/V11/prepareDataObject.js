@@ -6,6 +6,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { startFunc as prepareInventory } from "./prepareInventory.js";
+import { startFunc as ForLedger } from "./PrepareDataObject/ForLedger/entryFile.js";
 
 
 // --------------------------------------------------
@@ -37,7 +38,7 @@ const startFunc = () => {
         let template = fs.readFileSync(filePath, "utf8");
 
         const LocalInventoryItem = LocalFuncInventoryArray();
-        const LocalLedgerItem = LocalFuncForLedgerEntries();
+        const LocalLedgerItem = ForLedger();
 
         let data = JSON.parse(template);
 
@@ -114,7 +115,7 @@ const LocalFuncForLedgerEntries = () => {
     });
 
 
-    const LocalLedgerEntry = LocalFuncForPrepareLedger({
+    const LocalLedgerEntry = prepareLedger({
         inLedgerName: CommonLedgerName,
         inAmount: `-${LocalAmount}.00`
     });
@@ -122,7 +123,7 @@ const LocalFuncForLedgerEntries = () => {
     LocalArray.push(LocalLedgerEntry);
 
 
-    const LocalCGST = LocalFuncForPrepareLedger({
+    const LocalCGST = prepareLedger({
         inLedgerName: "CGST Output",
         inAmount: `${(LocalAmount - LocalOnlyAmount) / 2}.00`
     });
@@ -130,7 +131,7 @@ const LocalFuncForLedgerEntries = () => {
     LocalArray.push(LocalCGST);
 
 
-    const LocalSGST = LocalFuncForPrepareLedger({
+    const LocalSGST = prepareLedger({
         inLedgerName: "SGST Output",
         inAmount: `${(LocalAmount - LocalOnlyAmount) / 2}.00`
     });
@@ -138,21 +139,6 @@ const LocalFuncForLedgerEntries = () => {
     LocalArray.push(LocalSGST);
 
     return LocalArray;
-};
-
-
-// Prepares single ledger entry
-const LocalFuncForPrepareLedger = ({ inLedgerName, inAmount }) => {
-
-    const filePath = path.join(__dirname, "..", "..", "Data", "ledgers.json");
-    let template = fs.readFileSync(filePath, "utf8");
-
-    let data = JSON.parse(template);
-
-    data.ledgername = inLedgerName;
-    data.amount = inAmount;
-
-    return data;
 };
 
 export { startFunc };
