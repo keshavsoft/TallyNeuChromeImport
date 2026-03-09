@@ -16,13 +16,6 @@ import { startFunc as ReadClientData } from "./ReadClientData/entryFile.js";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-
-// --------------------------------------------------
-// Constants
-// --------------------------------------------------
-
-const CommonLedgerName = "3F Industries Limited";
-
 const startFunc = () => {
     try {
         const filePath = path.join(__dirname, "..", "..", "..", "Data", "sales.json");
