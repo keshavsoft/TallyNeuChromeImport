@@ -4,14 +4,14 @@ import { fileURLToPath } from "url";
 import { startFunc as ForLedger } from "./ForLedger/entryFile.js";
 import { startFunc as ForInventory } from "./ForInventory/entryFile.js";
 import { startFunc as ReadClientData } from "./ReadClientData/entryFile.js";
+import { startFunc as prepareTallyJson } from "./prepareTallyJson/entryFile.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const startFunc = () => {
     try {
-        const filePath = path.join(__dirname, "..", "..", "..", "Data", "sales.json");
-        let template = fs.readFileSync(filePath, "utf8");
+        let data = prepareTallyJson();
 
         const LocalClientData = ReadClientData();
 
@@ -21,8 +21,6 @@ const startFunc = () => {
             inItemsJsonAsArray: LocalClientData.allinventoryentries,
             inLedgerDetails: LocalClientData.customerDetails
         });
-
-        let data = JSON.parse(template);
 
         // --------------------------------------------------
         // Party Details
