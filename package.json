@@ -1,6 +1,6 @@
 {
   "name": "tallyneuchromeimport",
-  "version": "1.15.1",
+  "version": "1.16.1",
   "description": "cloned from",
   "homepage": "https://github.com/keshavsoft/TallyNeuChromeImport#readme",
   "bugs": {
@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "Import/V14/entryFile.js",
+  "main": "Import/V16/insertToTallyAndJson.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   }
